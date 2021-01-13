@@ -1,7 +1,11 @@
+body {
+    background: rgb(224, 215, 215);
+}
+
 .dino {
     width: 60px;
     height: 60px;
-    background: orange;
+    background-image: url(img/dino.png);
     position: absolute;
     bottom: 0;
 }
@@ -11,5 +15,31 @@
     width: 60px;
     height: 60px;
     bottom: 0;
-    background: green;
+    background-image: url(img/cactus.png);
+}
+
+.game-over{
+    text-align: center;
+    color: rgb(204, 34, 34);
+    margin-top: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@keyframes slideright {
+    from {
+        background-position: 70000%;
+    }
+    to {
+        background-position: 0;
+    }
+}
+
+.background {
+    position: absolute;
+    bottom: 0;
+    background-image: url(img/background.png);
+    background-repeat: repeat-x;
+    animation: slideright 600s infinite linear;
+    width: 100%;
+    height: 200px;
 }
